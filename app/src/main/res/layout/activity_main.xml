@@ -7,66 +7,54 @@
     tools:context=".MainActivity"
     android:background="@color/indigo">
 
+
     <View
+
         android:id="@+id/header"
-        android:layout_width="413dp"
+        android:layout_width="match_parent"
         android:layout_height="72dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/header"
-        android:elevation="4dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="-3dp" />
+        tools:ignore="MissingConstraints" />
 
-    <FrameLayout
-        android:id="@+id/layout_genre"
-        android:layout_width="411dp"
-        android:layout_height="290dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="100dp"
-        android:background="@color/purple_scroll"
-        >
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RV_genre"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fadeScrollbars="true"
-            android:scrollbars="horizontal"
-            android:orientation="horizontal"
-            android:scrollbarAlwaysDrawHorizontalTrack="true"
-            >
+    <Button
+        android:id="@+id/homebutton"
+        android:layout_width="124dp"
+        android:layout_height="26dp"
+        android:background="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toStartOf="@+id/header"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043"
+        tools:ignore="MissingConstraints" />
 
-        </androidx.recyclerview.widget.RecyclerView>
-    </FrameLayout>
 
-    <LinearLayout
-        android:id="@+id/layout_topanime"
-        android:layout_width="411dp"
-        android:layout_height="290dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="423dp"
-        android:background="@color/purple_scroll"
-        >
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RV_topanime"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fadeScrollbars="true"
-            android:scrollbars="horizontal"
-            android:orientation="horizontal"
-            android:scrollbarAlwaysDrawHorizontalTrack="true"
-            >
+    <Button
+        android:id="@+id/buttonaction"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:background="@drawable/genre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/header"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264" />
 
-        </androidx.recyclerview.widget.RecyclerView>
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/buttonscifi"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:background="@drawable/topanime"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/header"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.877" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
