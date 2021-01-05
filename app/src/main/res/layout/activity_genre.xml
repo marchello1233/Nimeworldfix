@@ -32,30 +32,16 @@
         app:layout_constraintVertical_bias="0.043"
         tools:ignore="MissingConstraints" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RV_Genrename"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        tools:itemCount="43"
+        tools:listitem="@layout/genre_item"
+        >
 
-    <Button
-        android:id="@+id/btn_genre"
-        android:layout_width="wrap_content"
-        android:layout_height="250dp"
-        android:background="@drawable/genre"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/header"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.264" />
-
-    <Button
-        android:id="@+id/btn_topanime"
-        android:layout_width="wrap_content"
-        android:layout_height="250dp"
-        android:background="@drawable/topanime"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/header"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.877" />
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
