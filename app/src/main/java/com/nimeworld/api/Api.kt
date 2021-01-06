@@ -1,4 +1,4 @@
-package com.nimeworld
+package com.nimeworld.api
 
 object Api{
     @JvmStatic
