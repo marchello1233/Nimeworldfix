@@ -32,16 +32,6 @@
         app:layout_constraintVertical_bias="0.043"
         tools:ignore="MissingConstraints" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RV_Genrename"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="70dp"
-        tools:itemCount="43"
-        tools:listitem="@layout/genre_item"
-        >
-
-    </androidx.recyclerview.widget.RecyclerView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

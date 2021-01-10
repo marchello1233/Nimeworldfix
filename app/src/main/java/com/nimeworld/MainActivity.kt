@@ -12,13 +12,16 @@ class MainActivity : AppCompatActivity() {
         var moviemenu:String?=null
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        btn_genre.setOnClickListener {
-            val intent = Intent(this, GenreActivity::class.java)
-            startActivity(intent)
+        val homefragment = HomeFragment()
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fl_fragmentcontainer,homefragment)
+            commit()
         }
-        btn_topanime.setOnClickListener {
-            val intent = Intent(this, MovieMenuActivity::class.java)
-            startActivity(intent)
+        btn_home.setOnClickListener {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_fragmentcontainer,homefragment)
+                commit()
+            }
         }
     }
 }

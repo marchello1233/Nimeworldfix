@@ -4,7 +4,9 @@ import com.google.gson.annotations.SerializedName
 
 class AnimeList {
     @SerializedName("mal_id")
-    var GenreId: Integer? = null
+    var anime_id: Int? = null
     @SerializedName("image_url")
-    var GenreName: String? = null
+    var image_url: String? = null
+    @SerializedName("title")
+    var title:String? = null
 }

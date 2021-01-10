@@ -10,7 +10,6 @@ import com.nimeworld.R
 
 class genrelist_adapter(private var genrename: List<String>,private var images:List<Int>,private val onGenreClickListener: OnGenreClickListener):RecyclerView.Adapter<genrelist_adapter.ViewHolder>() {
     inner class ViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView){
-        val itemTitle: TextView = itemView.findViewById(R.id.TV_genrename)
         val itemPicture: ImageView = itemView.findViewById(R.id.IV_genre)
 
     }
@@ -24,7 +23,7 @@ class genrelist_adapter(private var genrename: List<String>,private var images:L
 
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-      holder.itemTitle.text=genrename[position]
+        holder.itemPicture.setImageResource(images[position])
         var genreid = position+1
         holder.itemView.setOnClickListener{
             onGenreClickListener.onGenreItemClicked(genreid)

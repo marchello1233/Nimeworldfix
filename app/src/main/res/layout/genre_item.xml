@@ -15,27 +15,18 @@
         android:layout_alignTop="@+id/IV_genre"
         android:layout_alignBottom="@+id/IV_genre"
         android:orientation="horizontal"
-        android:background="@color/purple_200"
+
         >
         <ImageView
             android:id="@+id/IV_genre"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_margin="10dp"
-            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            android:src="@drawable/action"
             />
 
-            <TextView
-                android:id="@+id/TV_genrename"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
 
-                android:text="Title"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                />
 
         </LinearLayout>
 

@@ -1,24 +1,30 @@
 package com.nimeworld.adapter
 
+import android.content.ClipData
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
-import com.nimeworld.model.MovieList
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.moviemenu_item.view.*
 import com.nimeworld.R
+import com.nimeworld.api.Anime
+import com.nimeworld.api.AnimeList
+import com.nimeworld.model.MovieList
 import com.squareup.picasso.Picasso
 
-class MovieList_adapter(var context: Context, var arrayList: ArrayList<MovieList>) :
-        RecyclerView.Adapter<MovieList_adapter.ItemHolder>() {
+class movieList_adapter(var context: Context, var arrayList: ArrayList<MovieList>) :
+        RecyclerView.Adapter<movieList_adapter.ItemHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemHolder {
         val viewHolder = LayoutInflater.from(parent.context)
-                .inflate(R.layout.activity_movie_menu, parent, false)
+                .inflate(R.layout.moviemenu_item, parent, false)
         return ItemHolder(viewHolder)
     }
 
@@ -27,20 +33,20 @@ class MovieList_adapter(var context: Context, var arrayList: ArrayList<MovieList
     }
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
-
-        val movielist: MovieList = arrayList.get(position)
-        val movieposter = holder.itemView.IV_movie
-
-        Picasso.get()
-
-
+        val movie:MovieList= arrayList.get(position)
+        val poster = holder.itemView.IV_movie
+       Picasso.get().load(movie.image_url).into(poster)
+        holder.title.text = movie.title
         holder.icons.setOnClickListener {
-
+            Toast.makeText(context, movie.image_url, Toast.LENGTH_LONG).show()
         }
 
     }
+
     class ItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
         var icons = itemView.findViewById<ImageView>(R.id.IV_movie)
+        var title = itemView.findViewById<TextView>(R.id.tv_movietitle)
 
     }
 }

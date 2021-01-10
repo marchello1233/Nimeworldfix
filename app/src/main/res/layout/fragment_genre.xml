@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GenreFragment"
+    android:background="@color/purple_scroll">
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RV_Genrename"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:itemCount="43"
+        tools:listitem="@layout/genre_item"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</FrameLayout>

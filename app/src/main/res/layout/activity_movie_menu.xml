@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MovieMenuActivity"
-    android:background="@color/purple_scroll">
+    android:background="@color/purple_scroll"
+    android:fitsSystemWindows="true">
     <View
 
         android:id="@+id/header"
@@ -27,7 +28,9 @@
         app:layout_constraintStart_toStartOf="@+id/header"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.043"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        />
+
 
     <TextView
         android:id="@+id/tv_title"
@@ -38,16 +41,19 @@
         android:textSize="30sp"
         tools:ignore="MissingConstraints"
         app:layout_constraintTop_toBottomOf="@id/header"
-        android:textColor="@color/white">
+        android:textColor="@color/white"
+        android:fontFamily="@font/bebasneue_regular">
     </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RV_movielist"
+        android:layout_marginTop="120dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        android:layout_height="match_parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="0dp"
+
+        >
 
     </androidx.recyclerview.widget.RecyclerView>
 </androidx.constraintlayout.widget.ConstraintLayout>
