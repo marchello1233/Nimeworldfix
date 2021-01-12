@@ -18,9 +18,8 @@ import com.nimeworld.api.AnimeList
 import com.nimeworld.model.MovieList
 import com.squareup.picasso.Picasso
 
-class movieList_adapter(var context: Context, var arrayList: ArrayList<MovieList>) :
+class movieList_adapter( var arrayList: ArrayList<MovieList>,private val onmovieclicklistener: OnMovieClickListener) :
         RecyclerView.Adapter<movieList_adapter.ItemHolder>() {
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemHolder {
         val viewHolder = LayoutInflater.from(parent.context)
@@ -37,8 +36,8 @@ class movieList_adapter(var context: Context, var arrayList: ArrayList<MovieList
         val poster = holder.itemView.IV_movie
        Picasso.get().load(movie.image_url).into(poster)
         holder.title.text = movie.title
-        holder.icons.setOnClickListener {
-            Toast.makeText(context, movie.image_url, Toast.LENGTH_LONG).show()
+        holder.itemView.setOnClickListener{
+            onmovieclicklistener.onMovieItemClicked(position,movie.animeid!!)
         }
 
     }

@@ -20,11 +20,8 @@ class GenreActivity : AppCompatActivity(),OnGenreClickListener {
     }
 
     override fun onGenreItemClicked(position: Int) {
-        val intent = Intent(this, MovieMenuActivity::class.java)
-        intent.putExtra("menu","genre")
-        intent.putExtra("genreid",position)
-        intent.putExtra("genrename",genrename[position-1])
-        startActivity(intent)
+
+
 
     }
     private fun addToList(){

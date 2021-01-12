@@ -80,7 +80,11 @@ class GenreFragment : Fragment(R.layout.fragment_genre), OnGenreClickListener {
     }
 
     override fun onGenreItemClicked(positon: Int) {
-        TODO("Not yet implemented")
+        val intent = Intent(activity,MovieMenuActivity::class.java)
+        intent.putExtra("menu","genre")
+        intent.putExtra("genreid",positon)
+        intent.putExtra("genrename",genrename[positon-1])
+        requireActivity().startActivity(intent)
     }
 
 }

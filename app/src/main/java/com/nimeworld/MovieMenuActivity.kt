@@ -1,5 +1,6 @@
 package com.nimeworld
 
+import android.content.Intent
 import android.graphics.Movie
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.nimeworld.adapter.OnMovieClickListener
 import com.nimeworld.adapter.genrelist_adapter
 import com.nimeworld.adapter.movieList_adapter
 import com.nimeworld.api.*
@@ -19,7 +21,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import kotlinx.android.synthetic.main.activity_genre.btn_home as btn_home1
 
-class MovieMenuActivity : AppCompatActivity() {
+class MovieMenuActivity : AppCompatActivity(),OnMovieClickListener {
     private var recyclerView: RecyclerView? = null
     private var movie: ArrayList<MovieList>? = null
     private var gridLayoutManager: GridLayoutManager? = null
@@ -28,7 +30,8 @@ class MovieMenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_menu)
         btn_home.setOnClickListener{
-
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
         }
         val type: String? = intent.getStringExtra("menu")
         val genreid: Int = intent.getIntExtra("genreid",0)
@@ -99,8 +102,14 @@ class MovieMenuActivity : AppCompatActivity() {
         gridLayoutManager = GridLayoutManager(applicationContext, 3, LinearLayoutManager.VERTICAL, false)
         recyclerView?.layoutManager = gridLayoutManager
         recyclerView?.setHasFixedSize(true)
-        posteradapter = movieList_adapter(applicationContext, movie!!)
+        posteradapter = movieList_adapter( movie!!,this)
         recyclerView?.adapter = posteradapter
 
+    }
+
+    override fun onMovieItemClicked(positon: Int,animeid: Int) {
+        val intent = Intent(applicationContext,MovieSelectedActivity::class.java)
+        intent.putExtra("animeid",animeid)
+        startActivity(intent)
     }
 }
