@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.nimeworld.adapter.OnGenreClickListener
 import com.nimeworld.adapter.genrelist_adapter
 import kotlinx.android.synthetic.main.fragment_genre.*
+import java.nio.BufferUnderflowException
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -80,11 +81,21 @@ class GenreFragment : Fragment(R.layout.fragment_genre), OnGenreClickListener {
     }
 
     override fun onGenreItemClicked(positon: Int) {
-        val intent = Intent(activity,MovieMenuActivity::class.java)
+       /* val intent = Intent(activity,MovieMenuActivity::class.java)
         intent.putExtra("menu","genre")
         intent.putExtra("genreid",positon)
         intent.putExtra("genrename",genrename[positon-1])
-        requireActivity().startActivity(intent)
+        requireActivity().startActivity(intent)*/
+        val args = Bundle()
+        var fragmentmovie = FragmentPoster()
+        args.putString("genrename",genrename[positon-1])
+        args.putInt("genreid",positon)
+        args.putString("menu","genre")
+        fragmentmovie.arguments = args
+        var fr = fragmentManager?.beginTransaction()
+        fr?.replace(R.id.fl_fragmentcontainer, fragmentmovie)
+        fr?.commit()
+        fr?.addToBackStack(null)
     }
 
 }

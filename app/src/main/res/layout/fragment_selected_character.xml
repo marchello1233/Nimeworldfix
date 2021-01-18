@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+            <TextView
+                android:id="@+id/tv_charactername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Character Name"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bebasneue_regular"
+                android:paddingTop="15dp"
+                android:textSize="25dp"/>
+
+
+            <ImageView
+                android:id="@+id/IV_charactername"
+                android:layout_width="225px"
+                android:layout_height="350px"
+                android:layout_below="@id/tv_charactername"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:background="@color/white" />
+            <TextView
+                android:id="@+id/tv_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotocondensed_regular"
+                android:layout_marginTop="10dp"
+                android:text="Lorem ipsum dolor sit amet, cofdjaklf;jsakfdjsklajfdksla;j;fjsakl"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:layout_below="@id/IV_charactername"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_voiceactor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="VOICE ACTOR"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bebasneue_regular"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/tv_details"
+                android:textSize="20dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RV_voiceactor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_voiceactor" />
+
+        </RelativeLayout>

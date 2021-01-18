@@ -18,9 +18,14 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             fr?.addToBackStack(null)
         }
         btn_topanime.setOnClickListener {
-            val intent = Intent(activity,MovieMenuActivity::class.java)
-            intent.putExtra("menu","top")
-            requireActivity().startActivity(intent)
+            val args = Bundle()
+            var fragmentmovie = FragmentPoster()
+            var fr = fragmentManager?.beginTransaction()
+            args.putString("menu","top")
+            fragmentmovie.arguments = args
+            fr?.replace(R.id.fl_fragmentcontainer, fragmentmovie)
+            fr?.commit()
+            fr?.addToBackStack(null)
         }
 
     }

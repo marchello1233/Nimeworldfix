@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300px"
+    android:layout_height="650px"
+    android:orientation="vertical"
+    android:layout_margin = "10dp"
+    android:background="@color/purple_200">
+
+
+    <ImageView
+        android:id="@+id/IV_voiceactor"
+        android:layout_width="225px"
+        android:layout_height="330px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_actorname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/IV_voiceactor"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Language"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_actorname"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"/>
+
+
+
+</RelativeLayout>

@@ -15,7 +15,7 @@
 
                 <ImageView
                     android:id="@+id/IV_movie"
-                    android:layout_width="320px"
+                    android:layout_width="145dp"
                     android:layout_height="180dp"
                     android:layout_weight="1"
                     android:scaleType="centerCrop"

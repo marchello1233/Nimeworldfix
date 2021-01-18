@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieSelectedFragment">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/IV_poster"
+                android:layout_width="120dp"
+                android:layout_height="180dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+            <TextView
+                android:id="@+id/tv_animeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/bebasneue_regular"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:autoSizeMaxTextSize="10sp"
+                android:text="@string/title"
+                android:layout_toRightOf="@id/IV_poster"
+                />
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebasneue_regular"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:text="Status :"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/IV_poster"
+                android:layout_below="@id/tv_animeTitle"
+                />
+            <TextView
+                android:id="@+id/tv_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebasneue_regular"
+                android:textColor="@color/white"
+                android:text="Duration :"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/IV_poster"
+                android:layout_below="@id/tv_status"
+                />
+            <TextView
+                android:id="@+id/tv_producer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/bebasneue_regular"
+                android:textColor="@color/white"
+                android:text="Premiered :"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/IV_poster"
+                android:layout_below="@id/tv_duration"/>
+            <TextView
+                android:id="@+id/tv_episode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebasneue_regular"
+                android:textColor="@color/white"
+                android:text="Episodes :"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/IV_poster"
+                android:layout_below="@id/tv_producer"/>
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebasneue_regular"
+                android:textColor="@color/white"
+                android:text="Rating :"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/IV_poster"
+                android:layout_below="@id/tv_episode"
+                />
+            <TextView
+                android:id="@+id/tv_statusname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebasneue_regular"
+                android:includeFontPadding="false"
+                android:text="Airing"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/tv_status"
+                android:layout_below="@id/tv_animeTitle" />
+
+            <TextView
+                android:id="@+id/tv_durationname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebasneue_regular"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:text="20 mins per eps"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/tv_duration"
+                android:layout_below="@id/tv_statusname"
+                />
+
+            <TextView
+                android:id="@+id/tv_producername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebasneue_regular"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:text="Funyme"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/tv_producer"
+                android:layout_below="@id/tv_durationname"
+                />
+            <TextView
+                android:id="@+id/tv_episodename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebasneue_regular"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:text="25"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/tv_episode"
+                android:layout_below="@id/tv_producername"/>
+            <TextView
+                android:id="@+id/tv_ratingname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebasneue_regular"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:text="5"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@id/tv_rating"
+                android:layout_below="@id/tv_episodename"/>
+
+
+                <TextView
+                    android:id="@+id/tv_synopsis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/IV_poster"
+                    android:layout_alignStart="@id/IV_poster"
+                    android:textColor="@color/white"
+                    android:text="Synopsis"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/bebasneue_regular"
+                    />
+                <TextView
+                    android:id="@+id/tv_synopsisfill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignStart="@id/IV_poster"
+                    android:textColor="@color/white"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                    android:textSize="15dp"
+                    android:fontFamily="@font/robotocondensed_regular"
+                    android:layout_below="@id/IV_poster"
+                    />
+                <Button
+                    android:id="@+id/btn_character"
+                    android:layout_width="wrap_content"
+                   android:layout_margin="15dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/character"
+                    android:layout_below="@id/tv_synopsisfill"/>
+                <Button
+                    android:id="@+id/btn_news"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/news"
+                    android:layout_below="@id/btn_character"/>
+
+        </RelativeLayout>
+
+</FrameLayout>

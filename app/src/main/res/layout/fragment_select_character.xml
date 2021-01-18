@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_scroll"
+   >
+
+        <TextView
+            android:id="@+id/tv_selectcaharacter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="select Character"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bebasneue_regular"
+            android:paddingTop="15dp"
+            android:textSize="25dp"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RV_choosecharacter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_selectcaharacter"
+            tools:listitem="@layout/character_item"
+            />
+
+
+</RelativeLayout>

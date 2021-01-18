@@ -3,30 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentPoster"
-    >
+    tools:context=".NewsFragment"
+    android:background="@color/purple_scroll">
 
     <TextView
-        android:id="@+id/tv_title"
+        android:id="@+id/tv_nonews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title"
+        android:fontFamily="@font/bebasneue_regular"
+        android:text="No news found"
         android:textAlignment="center"
-        android:textSize="30sp"
-        tools:ignore="MissingConstraints"
+        android:layout_marginTop="300dp"
         android:textColor="@color/white"
-        android:fontFamily="@font/bebasneue_regular">
+        android:textSize="50dp"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="358dp">
+
     </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RV_movielist"
-        android:layout_marginTop="60dp"
+        android:id="@+id/RV_news"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
+        tools:listitem="@layout/newsitem"
+        tools:ignore="MissingConstraints"/>
 
-        >
-
-    </androidx.recyclerview.widget.RecyclerView>
 </FrameLayout>
