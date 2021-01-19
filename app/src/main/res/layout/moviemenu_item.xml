@@ -10,7 +10,7 @@
             android:layout_width="wrap_content"
             android:layout_height="250dp"
             android:padding="20dp"
-            android:background="@color/purple_scroll"
+            android:background="@color/indigo"
           >
 
                 <ImageView

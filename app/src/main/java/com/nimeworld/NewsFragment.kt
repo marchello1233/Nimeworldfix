@@ -3,9 +3,7 @@ package com.nimeworld
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nimeworld.adapter.newslist_adapter
 import com.nimeworld.api.Api
@@ -17,7 +15,7 @@ import retrofit2.Call
 import retrofit2.Response
 
 
-class NewsFragment : Fragment(R.layout.fragment_news) {
+class NewsFragment : Fragment(R.layout.fragment_news){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -60,4 +58,5 @@ class NewsFragment : Fragment(R.layout.fragment_news) {
         RV_news.layoutManager = LinearLayoutManager(context)
         RV_news.adapter= newslist_adapter(news)
     }
+
 }
