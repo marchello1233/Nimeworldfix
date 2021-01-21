@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:textAlignment="center"
             android:layout_marginTop="10dp"
-            android:text="Spinoff of manga that inspired Netflix show launched on October 14 ― This year's sixth issue of Shogakukan's Weekly Shonen Sunday magazine revealed on January 6 that Haro Aso's Alice in Borderland Retry"
+            android:text="News Content"
             android:textColor="@color/white"
             android:fontFamily="@font/robotocondensed_regular"
             android:textSize="15dp" />

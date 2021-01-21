@@ -78,16 +78,20 @@ class FragmentPoster : Fragment(R.layout.fragment_poster),OnMovieClickListener {
                     .enqueue(object : Callback<TopAnime> {
                         override fun onResponse(call: Call<TopAnime>, response: Response<TopAnime>) {
                             var item_count = response.body()?.topanime?.size
-
-                            for(x in 0 until item_count!!-1 ){
-                                var image_url = response.body()?.topanime?.get(x)?.image_url.toString()
-                                var id = response.body()?.topanime?.get(x)?.anime_id
-                                var title = response.body()?.topanime?.get(x)?.title
-                                arrayList.add(MovieList(id,image_url,title))
-                                posteradapter?.notifyDataSetChanged()
-                            }
-                            movie= arrayList
-                            updategrid(type)
+                               if (item_count!! > 0){
+                                    for(x in 0 until item_count!!-1 ){
+                                        var image_url = response.body()?.topanime?.get(x)?.image_url.toString()
+                                        var id = response.body()?.topanime?.get(x)?.anime_id
+                                        var title = response.body()?.topanime?.get(x)?.title
+                                        arrayList.add(MovieList(id,image_url,title))
+                                        posteradapter?.notifyDataSetChanged()
+                                    }
+                                    movie= arrayList
+                                    updategrid(type)
+                                }
+                                else if (item_count <= 1){
+                                    tv_title.text = "no anime found"
+                               }
                         }
 
                         override fun onFailure(call: Call<TopAnime>, t: Throwable) {
